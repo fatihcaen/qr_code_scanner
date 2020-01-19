@@ -11,3 +11,7 @@ This is a working QR and Barcode Scanner made by me with Flutter. There are few 
 
 https://pub.dev/packages/qr_mobile_vision<br>
 https://pub.dev/packages/share
+
+# Issues
+
+- Can't go back to the scanning page to scan another code. The camera goes black.
