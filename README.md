@@ -1,17 +1,16 @@
-# QR and Barcode Scanner
+# qr_scanner
 
-This is a working QR and Barcode Scanner made by me with Flutter. There are few issues that I'm working on. But feel free to clone and work on the project.
+A new Flutter project.
 
-# Features
+## Getting Started
 
-- You can scan any QR or barcode and see the result on another page.
-- You can share the result got from the scan via other apps in your phone.
+This project is a starting point for a Flutter application.
 
-# Used packages
+A few resources to get you started if this is your first Flutter project:
 
-https://pub.dev/packages/qr_mobile_vision<br>
-https://pub.dev/packages/share
+- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-# Issues
-
-- Can't go back to the scanning page to scan another code. The camera goes black.
+For help getting started with Flutter, view our
+[online documentation](https://flutter.dev/docs), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
