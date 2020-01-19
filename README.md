@@ -9,5 +9,5 @@ This is a working QR and Barcode Scanner made by me with Flutter. There are few 
 
 # Used packages
 
-https://pub.dev/packages/qr_mobile_vision
+https://pub.dev/packages/qr_mobile_vision<br>
 https://pub.dev/packages/share
