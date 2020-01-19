@@ -1,4 +1,4 @@
-# qr_code_scanner
+# QR and Barcode Scanner
 
 This is a working QR and Barcode Scanner made by me with Flutter. There are few issues that I'm working on. But feel free to clone and work on the project.
 
