@@ -12,6 +12,11 @@ class _ScanScreenState extends State<ScanScreen> {
   String scanResult = '';
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: _appBar,
@@ -52,7 +57,7 @@ class _ScanScreenState extends State<ScanScreen> {
   Widget get _appBar => AppBar(
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context);
+            Navigator.of(context).popAndPushNamed('/Home');
           },
           icon: Icon(Icons.arrow_back_ios),
         ),

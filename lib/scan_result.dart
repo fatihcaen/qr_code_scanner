@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:qr_scanner/scan_screen.dart';
+import 'package:qr_scanner/uihelper.dart';
 import 'package:share/share.dart';
 import 'dart:io';
 import 'package:image/image.dart';
 
 class ScanResult extends StatelessWidget {
-  String scanResult = '';
+  String scanResult;
 
   ScanResult({Key key, @required this.scanResult}) : super(key: key);
 
-  Widget get _qrImage => QrImage(
+  QrImage get _qrImage => QrImage(
         data: scanResult,
         version: QrVersions.auto,
         size: 320,
@@ -29,7 +30,7 @@ class ScanResult extends StatelessWidget {
               'Scan Result:',
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.deepOrange,
+                color: UIHelper.primaryColor,
                 fontWeight: FontWeight.w400,
               ),
             ),
@@ -59,7 +60,7 @@ class ScanResult extends StatelessWidget {
               width: 250,
               height: 50,
               child: RaisedButton(
-                color: Colors.deepOrange,
+                color: UIHelper.primaryColor,
                 onPressed: () {
                   Share.share(
                       'Here is the qr result i got from QR Code Scanner by fatihcandev!' +
@@ -95,46 +96,9 @@ class ScanResult extends StatelessWidget {
               width: 250,
               height: 50,
               child: RaisedButton(
-                color: Colors.deepOrange,
+                color: UIHelper.primaryColor,
                 onPressed: () {
-                  /* */
-                },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(
-                      Icons.language,
-                      color: Colors.white,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                    ),
-                    Text(
-                      'Search on Google',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 20),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Padding(
-              padding: EdgeInsets.only(top: 25),
-            ),
-            SizedBox(
-              width: 250,
-              height: 50,
-              child: RaisedButton(
-                color: Colors.deepOrange,
-                onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (BuildContext context) {
-                      return new ScanScreen();
-                    },
-                  ));
+                  Navigator.pushReplacementNamed(context, '/Scan');
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -165,9 +129,9 @@ class ScanResult extends StatelessWidget {
               width: 250,
               height: 50,
               child: RaisedButton(
-                color: Colors.deepOrange,
+                color: UIHelper.primaryColor,
                 onPressed: () {
-                  // File(_qrImage.toString()).writeAsBytesSync();
+                  // File('generatedQR.png').writeAsBytesSync(encodePng(_qrImage));
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
