@@ -9,7 +9,7 @@ class ScanScreen extends StatefulWidget {
 }
 
 class _ScanScreenState extends State<ScanScreen> {
-  String scanResult = '';
+  String scanResult;
 
   @override
   void initState() {

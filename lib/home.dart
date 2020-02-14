@@ -19,6 +19,7 @@ class _HomeState extends State<Home> {
   }
 
   Widget get _appBar => AppBar(
+        backgroundColor: UIHelper.primaryColor,
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
@@ -111,8 +112,6 @@ class _HomeState extends State<Home> {
                     child: Column(
                       children: <Widget>[
                         _tapToScan,
-                        _padding20,
-                        _lastScans,
                       ],
                     ),
                   ),
@@ -146,40 +145,6 @@ class _HomeState extends State<Home> {
               ),
               Text(
                 'Tap To Scan',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20,
-                ),
-              ),
-            ],
-          ),
-        ),
-      );
-
-  Widget get _lastScans => SizedBox(
-        width: 175,
-        child: RaisedButton(
-          padding: EdgeInsets.all(10),
-          color: UIHelper.primaryColor,
-          onPressed: () {
-            Navigator.pushNamed(context, '/Scan');
-          },
-          child: Wrap(
-            direction: Axis.horizontal,
-            alignment: WrapAlignment.center,
-            crossAxisAlignment: WrapCrossAlignment.center,
-            children: <Widget>[
-              Icon(
-                Icons.history,
-                color: Colors.white,
-                size: 25,
-              ),
-              Padding(
-                padding: EdgeInsets.only(right: 5),
-              ),
-              Text(
-                'Last Scans',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w400,

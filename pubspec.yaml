@@ -17,13 +17,10 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
-  sqflite: ^1.2.0
   image: ^2.1.4
   font_awesome_flutter: ^8.5.0
   qr_flutter: ^3.2.0
   share: ^0.6.3+5
-  url_launcher: ^5.4.1
-  rflutter_alert: ^1.0.3
   flutter_launcher_icons: ^0.7.4
   qr_mobile_vision: ^0.3.1
   flutter:
